@@ -1,0 +1,42 @@
+<div>
+  <h2>Edição de usuário</h2>
+  <div class="user-info-avatar">
+    <img src="{{ user.picture ? user.picture : 'https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png' }}" />
+  </div>
+  <form class="form-user">
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input type="text" name="email" id="email" [(ngModel)]="user.email" disabled class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="title">Título de tratamento:</label>
+      <select name="title" id="title" [(ngModel)]="user.title" class="form-control">
+        <option value="" selected>Nenhum</option>
+        <option value="mr">Mr</option>
+        <option value="ms">Ms</option>
+        <option value="mrs">Mrs</option>
+        <option value="miss">Miss</option>
+        <option value="dr">Dr</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="firstName">Primeiro nome:
+        <span style="color: red">*</span>
+      </label>
+      <input type="text" name="firstName" id="firstName" [(ngModel)]="user.firstName" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="lastName">Sobrenome:
+        <span style="color: red">*</span>
+      </label>
+      <input type="text" name="lastName" id="lastName" [(ngModel)]="user.lastName" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="picture">Link da imagem de perfil:</label>
+      <input type="text" name="picture" id="picture" [(ngModel)]="user.picture" class="form-control" />
+    </div>
+    <button class="btn btn-success" (click)="save()">
+      <i class="fa fa-edit"></i> Atualizar
+    </button>
+  </form>
+</div>

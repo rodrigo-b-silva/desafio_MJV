@@ -1,0 +1,39 @@
+.table-users {
+  margin-top: 20px;
+
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+}
+
+.btn-controls {
+  padding: 3px;
+  button {
+    margin-right: 5px;
+  }
+}
+
+#modal-user {
+  .user-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px 10px;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+  }
+
+  .user-info {
+    font-size: 20px;
+
+    .user-title {
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+  }
+}
